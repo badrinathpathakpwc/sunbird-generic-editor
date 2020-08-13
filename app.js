@@ -42,6 +42,6 @@ route_files.forEach(function (file) {
     require(routes + '/' + file)(app, __dirname);
 });
 
-var server = http.createServer(app).listen(app.get('port'), 1500);
+var server = http.createServer(app).listen(3000, 1500);
 server.timeout = 0;
-process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = '0';
+process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = '1';
